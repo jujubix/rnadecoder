@@ -1,0 +1,290 @@
+                      RNA-decoder README
+
+INTRODUCTION:
+
+This file briefly documents RNA-decoder v.1.0 - a program for making
+comparative predictions of RNA secondary structure in regions which
+may be protein coding. The program has two main uses: (1) Scanning for
+novel structures in alignments of genomic regions. (2) Predicting the
+fold of regions which are known to form RNA structures. RNA-decoder
+takes an alignment with coding annotation as well as a phylogenetic
+tree relating the individual sequences as input. The predictions are
+based on an analysis of the substitution pattern along the
+alignment. A stochastic context free grammar (SCFG) is used to
+evaluate all possible secondary structure conformations. A detailed
+description of the methodology can be found in:
+
+    Pedersen, J.S., Meyer, I.M., Forsberg, R., Simmonds, P. and Hein,
+    J.. A comparative method for finding and folding RNA secondary
+    structures in protein-coding regions. Submitted.
+
+The program takes a single XML file as input. Sections of the XML file
+are common to every analysis and others are data specific. The common
+sections of the XML file contains a complete specification of the
+employed model as well as a specification of the type of analysis to
+perform. The data specific sections contain a pointer to the alignment
+file as well as a specification of the phylogenetic tree and an
+ordered list of sequence names. The specific sections have to be
+replaced for each new data analysis.
+
+RNA-decoder is shipped with alignment files and XML files to perform
+some of the analysis reported in the above mentioned paper. This
+documentation will show how to run these examples and describe the
+structure of the data specific sections of the XML files.
+
+
+DIRECTORY STRUCTURE:
+
+The directory structure of the RNA-decoder tar ball is as follows:
+
+--------------------------------------------------------------------
+Structure                   Contents
+--------------------------------------------------------------------
+.                         : main directory 
+|-- bin			  : RNA-decoder executable for LINUX OS
+|-- python_scripts	  : RNA-decoder-extended script and 
+|   |			    RNA-decoder-two-step script.
+|   `-- py_modules	  : python modules needed by scripts
+|-- XML_files		  : XML-file examples for scanning and folding
+|-- data		  : 
+|   |-- cross_validation  : 
+|   |   |-- test	  : alignments used for cross-validation 
+|   |   `-- train	  : alignments used for cross-validation
+|   |-- full_train	  : complete training set used to train final
+|   |-- folds		  : test files for predicting folds
+|   `-- scans		  : alignments used for scans reported in article
+|   			    scan and fold models
+|-- tree                  : examples of newick tree files
+|-- scan_results	  : 
+|    |-- COL-files	  : Raw output from scanning examples
+|    `-- eps-figures	  : visualization of scan output
+`-- output		  : empty, used for storing output files
+
+
+DATA SPECIFIC XML-FILE ELEMENTS:
+
+The top sections of the XML-files contain the three data specific
+elements. They are preceded by short comments in the provided
+examples, which should make them easy to find and modify. Their
+structure is described below:
+
+  
+THE ALIGNMENT FILE POINTER:
+
+The element looks as follows:
+
+      <observationSet id="input_alg" format="col">
+	<file name="<path and name sting>" />
+      </observationSet>
+
+The path and name string should point to the file containing the
+alignment to be analyzed. The alignment must be in COL format (see
+below).
+  
+  
+THE PHYLOGENETIC TREE:
+
+The phylogenetic tree defines how the sequences of the multiple
+alignment are related to each other. It is specified by the following
+element:
+
+      <tree id="T_all">
+	<newick>
+	   
+	   ... tree in newick format ...
+
+	</newick>
+      </tree>
+
+The phylogenetic tree must be specified in NEWICK format, and should
+be based on third codon positions (see article for details). The
+following files, which can be found in the tree directory, contain the
+phylogenetic trees employed in the article:
+  
+  HCV_all_type_1a_and_1b.tree  
+  HCV_all_type_1a.tree         
+  polio.tree
+   
+A description of the newick format can be found here:
+  
+  http://evolution.genetics.washington.edu/phylip/newicktree.html
+  http://evolution.genetics.washington.edu/phylip/newick_doc.html
+  
+A net-based viewer can be found at:
+
+  http://iubio.bio.indiana.edu/treeapp/treeprint-form.html
+
+
+THE SEQUENCE NAME LIST:
+  
+The sequence-name list defines a mapping between the leaves of the
+tree and the sequences of the alignment. The list specifies the order
+in which the sequences appears in in the alignment (it is somewhat
+redundant since this information could be extracted from the alignment
+- but its currently not). The element looks as follows:
+
+      <taxa id="TA_all">
+	<taxon id="<first sequence name>" />
+	<taxon id="<second sequence name>" />
+			.
+			.
+			.
+	<taxon id="<last sequence name>" />
+      </taxa>
+
+
+
+DESCRIPTION OF COL FORMAT:
+
+RNA-decoder currently only accepts alignments in a COL format. A
+general description of the COL format can be found here:
+
+  http://www.bioinf.au.dk/colformat/
+
+The data directory holds several examples of our specific COL format.
+A col file contains a number of entries, each having a header section
+and a column section. The header must specify the contents of each
+column. The main keywords used in our col format are:
+
+  symbols, taxa, labels, type
+
+The 'symbols' and 'taxa' keywords are used to define a sequence as
+follows:
+
+  ; COL 2	symbols taxa="<name of sequence>"
+
+Where the name of the sequence must be identical to the name given to
+the corresponding leaf node.
+
+The 'labels' and 'type' keywords are used to define a label-column as
+follows:
+
+  ; COL 0	labels type="<label type>"
+
+A label column specifies some structural annotation of the alignment.
+The label type designates which type of annotation is being
+described. Two different label types are employed by RNA-decoder:
+'codonmask' and 'pairingmask'.
+
+The codonmask defines the codon position within the coding regions
+(denoted by '1','2', and '3'), non-coding regions should be denoted as
+third codon positions. The input alignment most have a codonmask.
+
+The pairingmask defines the RNA secondary structure. Right and left
+stem-pairing positions are denoted by a right and left parenthesis
+respectively (i.e. by '(' and ')'). Loop positions and non-structural
+positions are denoted by '.'. The paringmask is outputted together
+with the original alignment when RNA-decoder is used for predicting
+folds.
+
+The COL format can also include a number of columns which are given
+some descriptive name, e.g:
+
+  posteriorProbabilities
+
+The posteriorProbabilities column state the posterior probability of
+the assigned annotation, and is outputted when predicting folds.
+
+
+OUTPUT:
+
+The output of the analysis also consists of COL files. The provided
+XML-files will by default write their results to the output directory,
+this can be changed by modifying the analysis section at the bottom of
+the files.
+
+The scanning XML files will by default create a file called:
+
+  ./output/scan_PP.col
+
+This COL file will include two columns called 'left' and 'left_NS',
+which designate the posterior probability of a given position being
+part of a loop or a non-structural region, respectively. Their sum
+therefore defines the posterior probability that the given position
+forms part of a stem-pair. This can be used to scan for RNA-secondary
+structures (see the article for details).
+
+The folding XML files will by default create a file called.
+
+  ./output/fold_cyk.col
+
+This file will contain the original input COL file with a couple of
+added columns. The "pairingmask" columns defines the predicted RNA
+secondary structure and the 'posteriorProbabilities' column will give
+a measure of reliability of the predictions. Both are described in the
+'COL FORMAT SECTION' above.
+
+
+RUNNING THE EXAMPLES:
+
+Examples of both scanning and folding XML files can be found in the
+'XML-files' directory. Each contain a path to an input alignment and to
+the output directory. They should therefore by default be run from the
+main directory as follows:
+
+   ./bin/RNA-decoder <path to XML file>
+
+
+The following files will perform a scan along genomic sequences:
+
+./XML_files/scanning_scfg_HCV_1a_and_1b.xml
+./XML_files/scanning_scfg_HCV_1a.xml
+./XML_files/scanning_scfg_polio.xml
+
+and will analyze the following alignments (stated in the same order):
+
+./data/scans/HCV_all_type_1a_and_1b_no_anno_overlap_split.col
+./data/scans/HCV_all_type_1a_no_anno_overlap_split.col
+./data/scans/polio_no_anno_overlap_split.col
+
+The computational complexity of the method used prohibits calculations
+on long alignments. The above files therefore contain sets of
+overlapping alignment fragments (each of length 300). The final
+prediction therefore needs to be assembled from these.
+
+
+The following files will predict a specific fold:
+
+./XML_files/folding_scfg_HCV_1a_and_1b.xml
+./XML_files/folding_scfg_HCV_1a.xml
+./XML_files/folding_scfg_polio.xml 
+
+and will analyze the following alignments (stated in the same order):
+
+./data/folds/HCV_all_type_1a_and_1b_TEST_SET_all.col
+./data/folds/HCV_all_type_1a_TEST_SET_all.col
+./data/folds/polio_TEST_SET_1.col
+
+
+DOWNLOAD:
+
+A tar-ball containing a RNA-decoder executable compiled for Linux
+together with the above mentioned examples can be downloaded from:
+
+http://www.stats.ox.ac.uk/~meyer/RNA-decoder
+
+
+COPYRIGHT AND NON-WARRANTY:
+
+Copyright (c) 2002 by Jakob Skou Pedersen and Irmtraud Meyer
+All rights reserved.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+
+AUTHORS:
+
+Jakob Skou Pedersen,  jsp@daimi.au.dk
+Irmtraud Meyer,       meyer@stats.ox.ac.uk 

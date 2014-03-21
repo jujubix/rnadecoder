@@ -1,0 +1,169 @@
+; ==========
+; ENTRY	HCV_all_type_1a_and_1b_structure_3
+; TYPE	nucleotide
+; COL 0	labels type="codonmask"
+; COL 1	symbols taxa="AF009606"
+; COL 2	symbols taxa="AF271632"
+; COL 3	symbols taxa="AF290978"
+; COL 4	symbols taxa="AF511948"
+; COL 5	symbols taxa="AF511949"
+; COL 6	symbols taxa="AF511950"
+; COL 7	symbols taxa="HEC278830"
+; COL 8	symbols taxa="HPCHCJ1"
+; COL 9	symbols taxa="1b_BK"
+; COL 10	symbols taxa="1b_Genant"
+; COL 11	symbols taxa="1b_Genom"
+; COL 12	symbols taxa="1b_HCJ491"
+; COL 13	symbols taxa="1b_HCU012"
+; COL 14	symbols taxa="1b_HCV-J"
+; COL 15	symbols taxa="1b_HD-1"
+; COL 16	symbols taxa="1b_HPCRNA"
+; COL 17	symbols taxa="1b_JK1G"
+; COL 18	symbols taxa="1b_JTA"
+; COL 19	symbols taxa="1b_PP"
+; COL 20	symbols taxa="1b_S62220"
+; COL 21	symbols taxa="1b_UNKCDS"
+; COL 22	symbols taxa="AB049087"
+; COL 23	symbols taxa="AB049088"
+; COL 24	symbols taxa="AB049089"
+; COL 25	symbols taxa="AB049091"
+; COL 26	symbols taxa="AB049092"
+; COL 27	symbols taxa="AB049093"
+; COL 28	symbols taxa="AB049094"
+; COL 29	symbols taxa="AB049095"
+; COL 30	symbols taxa="AB049096"
+; COL 31	symbols taxa="AB049098"
+; COL 32	symbols taxa="AB049099"
+; COL 33	symbols taxa="AB049100"
+; COL 34	symbols taxa="AB049101"
+; COL 35	symbols taxa="AF165046"
+; COL 36	symbols taxa="AF165048"
+; COL 37	symbols taxa="AF165050"
+; COL 38	symbols taxa="AF165052"
+; COL 39	symbols taxa="AF165054"
+; COL 40	symbols taxa="AF165056"
+; COL 41	symbols taxa="AF165058"
+; COL 42	symbols taxa="AF165060"
+; COL 43	symbols taxa="AF165062"
+; COL 44	symbols taxa="AF165064"
+; COL 45	symbols taxa="AF176573"
+; COL 46	symbols taxa="AF207752"
+; COL 47	symbols taxa="AF207753"
+; COL 48	symbols taxa="AF207754"
+; COL 49	symbols taxa="AF207756"
+; COL 50	symbols taxa="AF207758"
+; COL 51	symbols taxa="AF207760"
+; COL 52	symbols taxa="AF207761"
+; COL 53	symbols taxa="AF207762"
+; COL 54	symbols taxa="AF207763"
+; COL 55	symbols taxa="AF207764"
+; COL 56	symbols taxa="AF207765"
+; COL 57	symbols taxa="AF207766"
+; COL 58	symbols taxa="AF207767"
+; COL 59	symbols taxa="AF207768"
+; COL 60	symbols taxa="AF207771"
+; COL 61	symbols taxa="AF207772"
+; COL 62	symbols taxa="AF208024"
+; COL 63	symbols taxa="D85516"
+; COL 64	symbols taxa="D89815"
+; COL 65	symbols taxa="D89872"
+; COL 66	symbols taxa="HCJ238800"
+; COL 67	symbols taxa="HCV132997"
+; COL 68	symbols taxa="HCVPOLYP"
+; COL 69	symbols taxa="HPC1B4"
+; COL 70	symbols taxa="HPC1B5"
+; COL 71	symbols taxa="HPCJRNA"
+; COL 72	symbols taxa="HPCPLYPRE"
+; COL 73	symbols taxa="HPCY1B6"
+; COL 74	symbols taxa="1b_HCJ483"
+; COL 75	symbols taxa="1b_JTB"
+; COL 76	symbols taxa="AF165045"
+; COL 77	symbols taxa="AF165047"
+; COL 78	symbols taxa="AF165049"
+; COL 79	symbols taxa="AF165051"
+; COL 80	symbols taxa="AF165053"
+; COL 81	symbols taxa="AF165055"
+; COL 82	symbols taxa="AF165057"
+; COL 83	symbols taxa="AF165059"
+; COL 84	symbols taxa="AF165061"
+; COL 85	symbols taxa="AF165063"
+; COL 86	symbols taxa="HCJ238799"
+; COL 87	symbols taxa="HCV132996"
+; COL 88	symbols taxa="HPC1B2"
+; COL 89	symbols taxa="HPC1B3"
+; COL 90	symbols taxa="HPCHCPO"
+; COL 91	symbols taxa="HPCIB1"
+; COL 92	symbols taxa="AF054247"
+; COL 93	symbols taxa="HCU01214"
+; COL 94	symbols taxa="HCU16362"
+; COL 95	symbols taxa="HCU45476"
+; COL 96	symbols taxa="HPCHUMR"
+; COL 97	symbols taxa="HPCJCG"
+; COL 98	symbols taxa="HPCPP"
+; COL 99	symbols taxa="HPVHCVN"
+; COL 100	pairedPositions
+; COL 101	positions
+; ----------
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	9230
+3	A	A	A	A	A	A	A	A	A	A	A	A	G	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	G	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	G	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	G	A	A	A	A	A	A	.	9231
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	9232
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	.	9233
+3	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	9234
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	9235
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	9236
+3	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	.	9237
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	9238
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	9239
+3	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	T	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	G	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	9240
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	9241
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	A	T	T	T	T	T	T	T	T	T	T	T	T	A	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	9290	9242
+3	A	A	A	A	A	A	A	A	C	C	C	C	T	C	T	T	T	C	C	C	C	C	C	C	C	C	T	T	C	C	T	C	C	C	T	C	C	C	T	C	C	C	C	C	C	T	C	C	C	T	T	T	T	C	C	T	C	C	C	T	C	C	C	C	C	C	T	T	C	C	C	A	C	C	C	T	C	C	C	T	C	C	C	C	C	C	T	C	C	C	C	C	T	C	T	C	C	C	C	9289	9243
+1	G	G	G	G	G	G	G	G	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	G	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	9288	9244
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	9287	9245
+3	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	A	G	G	G	G	G	G	G	C	G	G	G	G	G	G	G	G	G	G	A	G	A	G	G	G	G	G	T	A	G	A	G	G	G	G	G	G	G	A	G	G	A	G	G	G	G	A	A	T	G	G	A	G	G	G	A	G	9285	9246
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	9284	9247
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	A	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	A	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	A	C	C	C	C	C	C	C	A	C	9283	9248
+3	C	C	C	C	C	C	C	C	T	T	T	T	T	T	T	T	T	C	A	T	C	T	T	T	C	T	T	T	C	T	T	T	T	T	T	T	C	T	T	T	T	T	C	T	T	T	T	T	T	T	A	T	T	T	C	C	T	T	T	T	T	T	T	A	T	T	T	T	T	A	T	C	T	T	C	T	T	C	T	T	T	T	T	C	T	T	T	T	T	A	A	C	T	C	T	T	T	A	T	9282	9249
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	9281	9250
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	9251
+3	T	T	T	T	T	T	T	T	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	T	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	.	9252
+1	G	G	G	G	G	G	G	G	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	G	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	9278	9253
+2	G	G	G	G	G	G	G	G	C	C	C	C	C	C	T	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	A	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	G	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	T	C	C	C	C	9277	9254
+3	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	A	C	C	C	C	C	C	C	C	T	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	T	C	C	C	C	C	T	C	C	C	C	C	C	C	C	C	T	C	C	C	C	C	C	C	C	C	T	9276	9255
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	9275	9256
+2	G	A	G	G	A	A	A	G	G	A	G	A	G	A	A	G	A	A	A	A	G	A	G	A	A	G	A	A	A	A	A	A	G	A	A	A	A	A	A	A	A	G	G	A	A	A	G	G	G	G	A	A	A	G	A	A	A	G	A	A	G	A	G	A	A	A	G	A	A	A	A	A	A	A	A	A	A	A	A	A	A	G	G	G	A	A	G	A	A	A	A	A	G	G	A	G	A	A	G	9274	9257
+3	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	C	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	9273	9258
+1	C	C	C	C	C	C	C	C	C	T	T	C	T	C	T	T	T	C	C	T	T	T	T	C	C	T	T	T	T	C	T	T	T	T	T	T	T	T	T	C	T	C	T	T	T	T	C	T	T	C	C	C	T	C	T	T	T	C	T	T	T	C	T	C	C	T	C	T	T	C	T	C	T	C	C	T	T	T	T	T	C	T	C	T	T	T	C	T	T	C	C	C	T	T	T	C	C	C	T	9272	9259
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	9271	9260
+3	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	9270	9261
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	9269	9262
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	9268	9263
+3	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	T	C	C	C	C	C	C	C	T	C	C	T	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	T	C	C	C	T	C	C	C	C	C	C	C	C	C	T	C	C	C	C	C	C	C	C	C	T	C	C	C	C	C	C	C	C	C	C	C	C	C	.	9264
+1	T	T	T	T	C	T	C	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	.	9265
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	.	9266
+3	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	.	9267
+1	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	9263	9268
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	9262	9269
+3	C	C	C	T	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	T	C	C	C	C	C	C	C	9261	9270
+1	G	G	G	G	G	G	G	G	G	A	G	G	A	G	G	G	G	A	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	A	G	G	G	A	G	G	A	G	A	G	G	A	G	G	G	G	G	G	A	G	G	A	A	G	G	G	G	A	G	G	G	A	G	A	A	G	A	G	A	G	A	G	G	G	A	A	G	A	G	A	G	A	G	A	A	G	G	G	A	G	G	G	G	G	G	9260	9271
+2	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	A	G	G	A	A	G	G	G	G	A	G	G	G	G	G	A	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	9259	9272
+3	T	C	T	C	C	C	C	C	C	A	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	T	C	C	C	C	C	T	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	9258	9273
+1	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	9257	9274
+2	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	9256	9275
+3	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	9255	9276
+1	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	9254	9277
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	9253	9278
+3	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	9279
+1	A	A	A	A	A	A	A	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	9280
+2	C	C	C	C	C	C	C	C	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	C	T	T	T	T	T	T	T	T	T	T	T	C	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	9250	9281
+3	G	G	G	G	G	G	G	G	T	T	T	C	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	C	T	T	T	C	T	T	T	T	C	T	T	C	C	C	C	T	T	A	T	T	T	T	T	T	C	T	T	T	C	T	T	A	T	C	T	T	T	T	T	T	T	T	G	T	C	T	T	T	T	C	C	T	C	C	C	C	T	T	T	T	T	T	C	T	T	T	T	T	T	T	9249	9282
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	9248	9283
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	9247	9284
+3	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	C	T	T	C	T	T	T	C	T	T	T	T	T	C	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	C	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	C	T	T	T	T	T	C	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	9246	9285
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	9286
+2	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	9245	9287
+3	C	C	C	C	T	C	C	C	T	T	T	T	T	T	T	T	T	T	T	C	T	C	T	T	T	T	T	T	C	T	T	T	T	T	T	T	T	T	T	C	T	T	C	T	T	T	T	T	T	T	T	T	T	T	C	T	T	T	T	G	T	T	T	T	T	T	T	T	T	T	T	C	C	T	T	T	T	T	T	T	C	T	T	C	T	T	T	T	C	T	T	T	T	T	T	T	T	T	T	9244	9288
+1	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	9243	9289
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	9242	9290
+3	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	T	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	T	.	9291
+; **********

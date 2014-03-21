@@ -1,0 +1,68 @@
+; ==========
+; ENTRY	HCV_all_type_1a_structure_4
+; TYPE	nucleotide
+; COL 0	labels type="codonmask"
+; COL 1	symbols taxa="AF009606"
+; COL 2	symbols taxa="AF271632"
+; COL 3	symbols taxa="AF290978"
+; COL 4	symbols taxa="AF511948"
+; COL 5	symbols taxa="AF511949"
+; COL 6	symbols taxa="AF511950"
+; COL 7	symbols taxa="HEC278830"
+; COL 8	symbols taxa="HPCHCJ1"
+; COL 9	pairedPositions
+; COL 10	positions
+; ----------
+3	C	C	C	C	C	C	C	C	.	9266
+1	A	A	A	A	A	A	A	A	9312	9267
+2	G	G	G	G	G	G	G	G	9311	9268
+3	C	C	C	C	C	C	C	C	9310	9269
+1	G	G	G	G	G	G	G	G	9309	9270
+2	G	G	G	G	G	G	G	G	9308	9271
+3	G	G	G	G	G	G	G	G	9307	9272
+1	G	G	G	G	G	G	G	G	9306	9273
+2	G	G	G	G	G	G	G	G	9297	9274
+3	A	A	A	A	A	A	A	A	9296	9275
+1	G	G	G	G	G	G	G	G	9295	9276
+2	A	A	A	A	A	A	A	A	9294	9277
+3	C	C	C	C	C	C	C	C	9293	9278
+1	A	A	A	A	A	A	A	A	9292	9279
+2	T	T	T	T	T	T	T	T	9291	9280
+3	T	T	T	T	T	T	T	T	.	9281
+1	T	T	T	T	T	T	T	T	.	9282
+2	A	A	A	A	A	A	A	A	.	9283
+3	T	T	T	T	T	T	T	T	.	9284
+1	C	C	C	C	C	C	C	C	.	9285
+2	A	A	A	A	A	A	A	A	.	9286
+3	C	C	C	C	C	C	C	C	.	9287
+1	A	A	A	A	A	A	A	A	.	9288
+2	G	G	G	G	G	G	G	G	.	9289
+3	C	C	C	C	C	C	C	C	.	9290
+1	G	G	G	G	G	G	G	G	9280	9291
+2	T	T	T	T	T	T	T	T	9279	9292
+3	G	G	G	G	G	G	G	G	9278	9293
+1	T	T	T	T	T	T	T	T	9277	9294
+2	C	C	C	C	C	C	C	C	9276	9295
+3	T	T	T	T	T	T	T	T	9275	9296
+1	C	C	C	C	C	C	C	C	9274	9297
+2	A	A	A	A	G	G	G	A	.	9298
+3	T	T	T	T	T	T	T	T	.	9299
+1	G	G	G	G	G	G	G	G	.	9300
+2	C	C	C	C	C	C	C	C	.	9301
+3	C	C	C	C	C	C	C	C	.	9302
+1	C	C	C	C	C	C	C	C	.	9303
+2	G	G	G	G	G	G	G	G	.	9304
+3	G	G	G	G	G	G	G	G	.	9305
+1	C	C	C	C	C	C	C	C	9273	9306
+2	C	C	C	C	C	C	C	C	9272	9307
+3	C	C	C	C	C	C	C	C	9271	9308
+1	C	C	C	C	C	C	C	C	9270	9309
+2	G	G	G	G	G	G	G	G	9269	9310
+3	C	C	C	C	C	C	C	C	9268	9311
+1	T	T	T	T	T	T	T	T	9267	9312
+2	G	G	G	G	G	G	G	G	.	9313
+3	G	G	G	G	G	G	G	G	.	9314
+1	T	T	T	T	T	T	T	T	.	9315
+2	T	T	C	T	T	T	T	T	.	9316
+3	C	T	C	C	C	C	C	C	.	9317
+; **********

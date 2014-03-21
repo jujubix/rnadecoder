@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <!DOCTYPE scfg SYSTEM "../../lib/dtd/scfg.dtd" > -->
+<!-- created by the BiRC / Oxford Bioinformatics SCFG group -->
+<scfg-framework>
+
+  <scfg_specification>
+
+
+    <!--       THE ALIGNEMNT FILE POINTER:  -->
+    <!--       The input alignment must be col format and a pointer defined as -->
+    <!--       below. -->
+    <observationSet id="input_alg" format="col">
+      <file name="./data/scans/polio_no_anno_overlap_split.col" />
+    </observationSet>
+
+
+    <!--       THE PHYLOGENETIC TREE:  -->
+    <!--       The tree must be in newick format, and use the names defined in -->
+    <!--       the taxa list. -->
+    <tree id="T_all">
+      <newick>
+	(((POL3L37: 0.29775, AF541919: 0.00000): 0.20394, ((AF462419: 0.00423,
+	AF462418: 0.04519): 0.00000, ((AF405666: 0.16744, (AF405669: 0.13872,
+	(AF405690: 0.02417, AF405682: 0.05114): 0.08746): 0.06564): 0.10009,
+	((HPO132961: 0.13578, HPO132960: 0.00634): 0.12049, (HPO416942:
+	0.01439, (POLIO1A: 0.00597, NC_002058: 0.00045): 0.00598): 0.01750):
+	0.10722): 0.17057): 0.19117): 0.15266, ((AY278551: 0.21273, (AF448783:
+	0.21094, AF448782: 0.14570): 0.08157): 0.00000, ((AY056701: 0.63280,
+	AY278553: 0.24103): 0.37412, ((POL2CG1: 0.01710, POL2LAN: 0.00845):
+	0.39473, (HPO293918: 0.37824, PIP03XX: 0.31012): 0.35334): 0.01095):
+	0.21027): 0.22313, (AY278552: 0.07026, (AY278550: 0.01491, (AY278549:
+	0.01523, AY177685: 0.01087): 0.02709): 0.00000): 0.00000);
+      </newick> 
+    </tree>
+    
+
+    <!--       THE SEQUENCE NAME LIST: -->
+    <!--       The taxa list must correspond to the order of sequence -->
+    <!--       input in the col file -->
+    <taxa id="TA_all">
+      <taxon id="NC_002058" />
+      <taxon id="POLIO1A" />
+      <taxon id="HPO416942" />
+      <taxon id="HPO132960" />
+      <taxon id="HPO132961" />
+      <taxon id="AF462418" />
+      <taxon id="AF462419" />
+      <taxon id="AF405682" />
+      <taxon id="AF405690" />
+      <taxon id="AF405669" />
+      <taxon id="AF405666" />
+      <taxon id="POL2LAN" />
+      <taxon id="POL2CG1" />
+      <taxon id="AF448782" />
+      <taxon id="AF448783" />
+      <taxon id="AY177685" />
+      <taxon id="AY278549" />
+      <taxon id="AY278550" />
+      <taxon id="AY278552" />
+      <taxon id="AY278551" />
+      <taxon id="POL3L37" />
+      <taxon id="AF541919" />
+      <taxon id="HPO293918" />
+      <taxon id="PIP03XX" />
+      <taxon id="AY278553" />
+      <taxon id="AY056701" />
+    </taxa>
+
+      <!--         Definition of alphabets: -->
+      <fuzzyMetaNuc id="fuzzyMetaNuc" value="0.003" />
+      <fuzzyMetaDiNuc id="fuzzyMetaDiNuc" value="0.003" />
+
+
+        <!--    Definition of shared parameters :  -->
+        <!--    Definition of shared parameters :  -->
+        <!--     The shared parameters are used to define the parameterizedParameter -->
+        <!--     below. The later are the ones actually used in the models -->
+        <compoundParameter id="shared_pset">
+            <parameter id="shared_pset.r_ns_1" name="r_ns_1" value="0.205438" />
+            <parameter id="shared_pset.r_ns_2" name="r_ns_2" value="0.114789" />
+            <parameter id="shared_pset.r_ns_3" name="r_ns_3" value="1" final="" />
+            <parameter id="shared_pset.s_1" name="s_1" value="0.0805427" />
+            <parameter id="shared_pset.s_2" name="s_2" value="0.0475851" />
+            <parameter id="shared_pset.s_3" name="s_3" value="1" final="" />
+            <parameter id="shared_pset.r_p" name="r_p" value="0.328149" />
+            <parameter id="shared_pset.r_l" name="r_l" value="0.519059" />
+            <parameter id="shared_pset.ns_ts_tv_ratio_1" name="ns_ts_tv_ratio_1" value="4.82587" />
+            <parameter id="shared_pset.ns_ts_tv_ratio_2" name="ns_ts_tv_ratio_2" value="4.29669" />
+            <parameter id="shared_pset.ns_ts_tv_ratio_3" name="ns_ts_tv_ratio_3" value="19.7409" />
+            <parameter id="shared_pset.l_ts_tv_ratio_3" name="l_ts_tv_ratio_3" value="8.38345" />
+        </compoundParameter>
+        <!--      Definition of parameters used by the nested evolutionary models: -->
+        <!--      ts_tv_ratio non_structural: -->
+        <parameterizedParameter id="SM_non_structural_1.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="SM_non_structural_2.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="SM_non_structural_3.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--      ts_tv_ratio slow_non_structural: -->
+        <parameterizedParameter id="SM_slow_non_structural_1.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="SM_slow_non_structural_2.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="SM_slow_non_structural_3.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--      ts_tv_ratio fast_non_structural: -->
+        <parameterizedParameter id="SM_fast_non_structural_1.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="SM_fast_non_structural_2.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="SM_fast_non_structural_3.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--  ts_tv_ratio loop:   -->
+        <parameterizedParameter id="SM_loop_1.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="SM_loop_2.ts_tv_ratio" name="ts_tv_ratio" expression="ns_ts_tv_ratio_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="SM_loop_3.ts_tv_ratio" name="ts_tv_ratio" expression="l_ts_tv_ratio_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--     treescale non_structural:     -->
+        <parameterizedParameter id="TS_non_structural_1" name="scale" expression="r_ns_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_non_structural_2" name="scale" expression="r_ns_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_non_structural_3" name="scale" expression="r_ns_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--     treescale slow_non_structural:     -->
+        <parameterizedParameter id="TS_slow_non_structural_1" name="scale" expression="0.2*(r_ns_1)">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_slow_non_structural_2" name="scale" expression="0.2*(r_ns_2)">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_slow_non_structural_3" name="scale" expression="r_ns_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--     treescale fast_non_structural:     -->
+        <parameterizedParameter id="TS_fast_non_structural_1" name="scale" expression="3*(r_ns_1)">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_fast_non_structural_2" name="scale" expression="3*(r_ns_2)">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_fast_non_structural_3" name="scale" expression="r_ns_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--  treescale loop:   -->
+        <parameterizedParameter id="TS_loop_1" name="scale" expression="r_l*(r_ns_1)">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_loop_2" name="scale" expression="r_l*(r_ns_2)">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_loop_3" name="scale" expression="r_l*(r_ns_3)">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--    treescale stem: -->
+        <parameterizedParameter id="TS_stem_1_1" name="scale" expression="r_p*((r_ns_1)+(r_ns_1))/2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_stem_1_2" name="scale" expression="r_p*((r_ns_1)+(r_ns_2))/2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_stem_1_3" name="scale" expression="r_p*((r_ns_1)+(r_ns_3))/2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_stem_2_1" name="scale" expression="r_p*((r_ns_2)+(r_ns_1))/2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_stem_2_2" name="scale" expression="r_p*((r_ns_2)+(r_ns_2))/2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_stem_2_3" name="scale" expression="r_p*((r_ns_2)+(r_ns_3))/2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_stem_3_1" name="scale" expression="r_p*((r_ns_3)+(r_ns_1))/2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_stem_3_2" name="scale" expression="r_p*((r_ns_3)+(r_ns_2))/2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="TS_stem_3_3" name="scale" expression="r_p*((r_ns_3)+(r_ns_3))/2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--    left skew:    -->
+        <parameterizedParameter id="stem_1_1.s_left" name="s_left" expression="s_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_1_2.s_left" name="s_left" expression="s_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_1_3.s_left" name="s_left" expression="s_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_2_1.s_left" name="s_left" expression="s_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_2_2.s_left" name="s_left" expression="s_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_2_3.s_left" name="s_left" expression="s_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_3_1.s_left" name="s_left" expression="s_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_3_2.s_left" name="s_left" expression="s_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_3_3.s_left" name="s_left" expression="s_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--    right skew:    -->
+        <parameterizedParameter id="stem_1_1.s_right" name="s_right" expression="s_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_1_2.s_right" name="s_right" expression="s_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_1_3.s_right" name="s_right" expression="s_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_2_1.s_right" name="s_right" expression="s_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_2_2.s_right" name="s_right" expression="s_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_2_3.s_right" name="s_right" expression="s_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_3_1.s_right" name="s_right" expression="s_1">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_3_2.s_right" name="s_right" expression="s_2">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <parameterizedParameter id="stem_3_3.s_right" name="s_right" expression="s_3">
+            <compoundParameter idref="shared_pset" />
+        </parameterizedParameter>
+        <!--     Equilibrium frequencies non-structural  -->
+        <frequencies id="SM_non_structural_1.freq">
+            <compoundParameter id="SM_non_structural_1.freq.ps">
+                <parameter id="SM_non_structural_1.A" name="A" value="0.236503" />
+                <parameter id="SM_non_structural_1.C" name="C" value="0.235433" />
+                <parameter id="SM_non_structural_1.G" name="G" value="0.336841" />
+                <parameter id="SM_non_structural_1.T" name="T" value="0.191224" />
+            </compoundParameter>
+        </frequencies>
+        <frequencies id="SM_non_structural_2.freq">
+            <compoundParameter id="SM_non_structural_2.freq.ps">
+                <parameter id="SM_non_structural_2.A" name="A" value="0.228694" />
+                <parameter id="SM_non_structural_2.C" name="C" value="0.291077" />
+                <parameter id="SM_non_structural_2.G" name="G" value="0.208701" />
+                <parameter id="SM_non_structural_2.T" name="T" value="0.271528" />
+            </compoundParameter>
+        </frequencies>
+        <frequencies id="SM_non_structural_3.freq">
+            <compoundParameter id="SM_non_structural_3.freq.ps">
+                <parameter id="SM_non_structural_3.A" name="A" value="0.138392" />
+                <parameter id="SM_non_structural_3.C" name="C" value="0.377982" />
+                <parameter id="SM_non_structural_3.G" name="G" value="0.308048" />
+                <parameter id="SM_non_structural_3.T" name="T" value="0.175577" />
+            </compoundParameter>
+        </frequencies>
+        <!--     Equilibrium frequencies loop  -->
+        <frequencies id="SM_loop_3.freq">
+            <compoundParameter id="SM_loop_3.freq.ps">
+                <parameter id="SM_loop_3.A" name="A" value="0.218947" />
+                <parameter id="SM_loop_3.C" name="C" value="0.238737" />
+                <parameter id="SM_loop_3.G" name="G" value="0.270737" />
+                <parameter id="SM_loop_3.T" name="T" value="0.271579" />
+            </compoundParameter>
+        </frequencies>
+        <!--    Definition of the (nested) evolutionary emission distributions:  -->
+        <!--    non_structural models:  -->
+        <!--    non_structural_1:  -->
+        <hkyModel id="SM_non_structural_1">
+            <modelParameters>
+                <compoundParameter id="SM_non_structural_1.param">
+                    <parameterizedParameter idref="SM_non_structural_1.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_1.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_non_structural_1">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_non_structural_1" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_non_structural_1" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_non_structural_1" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_non_structural_1" />
+        </evoEmissionDistribution>
+        <!--    non_structural_2:  -->
+        <hkyModel id="SM_non_structural_2">
+            <modelParameters>
+                <compoundParameter id="SM_non_structural_2.param">
+                    <parameterizedParameter idref="SM_non_structural_2.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_2.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_non_structural_2">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_non_structural_2" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_non_structural_2" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_non_structural_2" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_non_structural_2" />
+        </evoEmissionDistribution>
+        <!--    non_structural_3:  -->
+        <hkyModel id="SM_non_structural_3">
+            <modelParameters>
+                <compoundParameter id="SM_non_structural_3.param">
+                    <parameterizedParameter idref="SM_non_structural_3.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_3.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_non_structural_3">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_non_structural_3" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_non_structural_3" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_non_structural_3" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_non_structural_3" />
+        </evoEmissionDistribution>
+        <!--    slow_non_structural models:  -->
+        <!--    slow_non_structural_1:  -->
+        <hkyModel id="SM_slow_non_structural_1">
+            <modelParameters>
+                <compoundParameter id="SM_slow_non_structural_1.param">
+                    <parameterizedParameter idref="SM_slow_non_structural_1.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_1.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_slow_non_structural_1">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_slow_non_structural_1" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_slow_non_structural_1" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_slow_non_structural_1" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_slow_non_structural_1" />
+        </evoEmissionDistribution>
+        <!--    slow_non_structural_2:  -->
+        <hkyModel id="SM_slow_non_structural_2">
+            <modelParameters>
+                <compoundParameter id="SM_slow_non_structural_2.param">
+                    <parameterizedParameter idref="SM_slow_non_structural_2.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_2.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_slow_non_structural_2">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_slow_non_structural_2" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_slow_non_structural_2" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_slow_non_structural_2" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_slow_non_structural_2" />
+        </evoEmissionDistribution>
+        <!--    slow_non_structural_3:  -->
+        <hkyModel id="SM_slow_non_structural_3">
+            <modelParameters>
+                <compoundParameter id="SM_slow_non_structural_3.param">
+                    <parameterizedParameter idref="SM_slow_non_structural_3.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_3.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_slow_non_structural_3">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_slow_non_structural_3" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_slow_non_structural_3" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_slow_non_structural_3" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_slow_non_structural_3" />
+        </evoEmissionDistribution>
+        <!--    fast_non_structural models:  -->
+        <!--    fast_non_structural_1:  -->
+        <hkyModel id="SM_fast_non_structural_1">
+            <modelParameters>
+                <compoundParameter id="SM_fast_non_structural_1.param">
+                    <parameterizedParameter idref="SM_fast_non_structural_1.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_1.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_fast_non_structural_1">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_fast_non_structural_1" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_fast_non_structural_1" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_fast_non_structural_1" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_fast_non_structural_1" />
+        </evoEmissionDistribution>
+        <!--    fast_non_structural_2:  -->
+        <hkyModel id="SM_fast_non_structural_2">
+            <modelParameters>
+                <compoundParameter id="SM_fast_non_structural_2.param">
+                    <parameterizedParameter idref="SM_fast_non_structural_2.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_2.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_fast_non_structural_2">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_fast_non_structural_2" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_fast_non_structural_2" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_fast_non_structural_2" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_fast_non_structural_2" />
+        </evoEmissionDistribution>
+        <!--    fast_non_structural_3:  -->
+        <hkyModel id="SM_fast_non_structural_3">
+            <modelParameters>
+                <compoundParameter id="SM_fast_non_structural_3.param">
+                    <parameterizedParameter idref="SM_fast_non_structural_3.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_3.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_fast_non_structural_3">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_fast_non_structural_3" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_fast_non_structural_3" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_fast_non_structural_3" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_fast_non_structural_3" />
+        </evoEmissionDistribution>
+        <!--    loop models:  -->
+        <!--    loop_1:  -->
+        <hkyModel id="SM_loop_1">
+            <modelParameters>
+                <compoundParameter id="SM_loop_1.param">
+                    <parameterizedParameter idref="SM_loop_1.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_1.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_loop_1">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_loop_1" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_loop_1" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_loop_1" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_loop_1" />
+        </evoEmissionDistribution>
+        <!--    loop_2:  -->
+        <hkyModel id="SM_loop_2">
+            <modelParameters>
+                <compoundParameter id="SM_loop_2.param">
+                    <parameterizedParameter idref="SM_loop_2.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_non_structural_2.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_loop_2">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_loop_2" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_loop_2" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_loop_2" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_loop_2" />
+        </evoEmissionDistribution>
+        <!--    loop_3:  -->
+        <hkyModel id="SM_loop_3">
+            <modelParameters>
+                <compoundParameter id="SM_loop_3.param">
+                    <parameterizedParameter idref="SM_loop_3.ts_tv_ratio" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies idref="SM_loop_3.freq" />
+            <alphabetPointer idref="fuzzyMetaNuc" />
+        </hkyModel>
+        <evoTree id="ET_loop_3">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_loop_3" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_loop_3" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_loop_3" cardinality="1" useHashTable="true">
+            <evoTreePointer idref="ET_loop_3" />
+        </evoEmissionDistribution>
+        <!--    Stem models :  -->
+        <!--    Definition of rate parameters for use in coding-paired rate martices :  -->
+        <!--       parameters derived from Bjarne Knudsens paired rate matrix:  -->
+        <!--       http://www.daimi.au.dk/~compbio/rnafold/dbl_mat.txt -->
+        <compoundParameter id="GTR_di_codon.param">
+            <parameter id="GTR_di_codon.R_AC_AA" name="R_AC_AA" value="200.295" final="" />
+            <parameter id="GTR_di_codon.R_AG_AA" name="R_AG_AA" value="479.282" final="" />
+            <parameter id="GTR_di_codon.R_AG_AC" name="R_AG_AC" value="55.145" final="" />
+            <parameter id="GTR_di_codon.R_AT_AA" name="R_AT_AA" value="2.98538" final="" />
+            <parameter id="GTR_di_codon.R_AT_AC" name="R_AT_AC" value="13.8393" final="" />
+            <parameter id="GTR_di_codon.R_AT_AG" name="R_AT_AG" value="1.24344" final="" />
+            <parameter id="GTR_di_codon.R_CA_AA" name="R_CA_AA" value="200.284" final="" />
+            <parameter id="GTR_di_codon.R_CA_AC" name="R_CA_AC" value="11.6678" final="" />
+            <parameter id="GTR_di_codon.R_CA_AG" name="R_CA_AG" value="2.71624" final="" />
+            <parameter id="GTR_di_codon.R_CA_AT" name="R_CA_AT" value="0.600138" final="" />
+            <parameter id="GTR_di_codon.R_CC_AA" name="R_CC_AA" value="0" final="" />
+            <parameter id="GTR_di_codon.R_CC_AC" name="R_CC_AC" value="173.812" final="" />
+            <parameter id="GTR_di_codon.R_CC_AG" name="R_CC_AG" value="0" final="" />
+            <parameter id="GTR_di_codon.R_CC_AT" name="R_CC_AT" value="3.86629" final="" />
+            <parameter id="GTR_di_codon.R_CC_CA" name="R_CC_CA" value="173.803" final="" />
+            <parameter id="GTR_di_codon.R_CG_AA" name="R_CG_AA" value="0.427159" final="" />
+            <parameter id="GTR_di_codon.R_CG_AC" name="R_CG_AC" value="0.0252665" final="" />
+            <parameter id="GTR_di_codon.R_CG_AG" name="R_CG_AG" value="2.36803" final="" />
+            <parameter id="GTR_di_codon.R_CG_AT" name="R_CG_AT" value="0.370951" final="" />
+            <parameter id="GTR_di_codon.R_CG_CA" name="R_CG_CA" value="6.88634" final="" />
+            <parameter id="GTR_di_codon.R_CG_CC" name="R_CG_CC" value="3.19913" final="" />
+            <parameter id="GTR_di_codon.R_CT_AA" name="R_CT_AA" value="21.3602" final="" />
+            <parameter id="GTR_di_codon.R_CT_AC" name="R_CT_AC" value="11.6335" final="" />
+            <parameter id="GTR_di_codon.R_CT_AG" name="R_CT_AG" value="0" final="" />
+            <parameter id="GTR_di_codon.R_CT_AT" name="R_CT_AT" value="7.5029" final="" />
+            <parameter id="GTR_di_codon.R_CT_CA" name="R_CT_CA" value="8.5383" final="" />
+            <parameter id="GTR_di_codon.R_CT_CC" name="R_CT_CC" value="230.336" final="" />
+            <parameter id="GTR_di_codon.R_CT_CG" name="R_CT_CG" value="4.08017" final="" />
+            <parameter id="GTR_di_codon.R_GA_AA" name="R_GA_AA" value="479.271" final="" />
+            <parameter id="GTR_di_codon.R_GA_AC" name="R_GA_AC" value="2.71631" final="" />
+            <parameter id="GTR_di_codon.R_GA_AG" name="R_GA_AG" value="78.8849" final="" />
+            <parameter id="GTR_di_codon.R_GA_AT" name="R_GA_AT" value="1.40125" final="" />
+            <parameter id="GTR_di_codon.R_GA_CA" name="R_GA_CA" value="55.1409" final="" />
+            <parameter id="GTR_di_codon.R_GA_CC" name="R_GA_CC" value="0" final="" />
+            <parameter id="GTR_di_codon.R_GA_CG" name="R_GA_CG" value="0.192856" final="" />
+            <parameter id="GTR_di_codon.R_GA_CT" name="R_GA_CT" value="21.2042" final="" />
+            <parameter id="GTR_di_codon.R_GC_AA" name="R_GC_AA" value="0.427155" final="" />
+            <parameter id="GTR_di_codon.R_GC_AC" name="R_GC_AC" value="6.88664" final="" />
+            <parameter id="GTR_di_codon.R_GC_AG" name="R_GC_AG" value="0.192858" final="" />
+            <parameter id="GTR_di_codon.R_GC_AT" name="R_GC_AT" value="1.61417" final="" />
+            <parameter id="GTR_di_codon.R_GC_CA" name="R_GC_CA" value="0.0252553" final="" />
+            <parameter id="GTR_di_codon.R_GC_CC" name="R_GC_CC" value="3.1991" final="" />
+            <parameter id="GTR_di_codon.R_GC_CG" name="R_GC_CG" value="0.420477" final="" />
+            <parameter id="GTR_di_codon.R_GC_CT" name="R_GC_CT" value="1.52547" final="" />
+            <parameter id="GTR_di_codon.R_GC_GA" name="R_GC_GA" value="2.36796" final="" />
+            <parameter id="GTR_di_codon.R_GG_AA" name="R_GG_AA" value="0" final="" />
+            <parameter id="GTR_di_codon.R_GG_AC" name="R_GG_AC" value="0" final="" />
+            <parameter id="GTR_di_codon.R_GG_AG" name="R_GG_AG" value="0" final="" />
+            <parameter id="GTR_di_codon.R_GG_AT" name="R_GG_AT" value="1.21704" final="" />
+            <parameter id="GTR_di_codon.R_GG_CA" name="R_GG_CA" value="0" final="" />
+            <parameter id="GTR_di_codon.R_GG_CC" name="R_GG_CC" value="0" final="" />
+            <parameter id="GTR_di_codon.R_GG_CG" name="R_GG_CG" value="8.09618" final="" />
+            <parameter id="GTR_di_codon.R_GG_CT" name="R_GG_CT" value="0" final="" />
+            <parameter id="GTR_di_codon.R_GG_GA" name="R_GG_GA" value="0" final="" />
+            <parameter id="GTR_di_codon.R_GG_GC" name="R_GG_GC" value="8.09612" final="" />
+            <parameter id="GTR_di_codon.R_GT_AA" name="R_GT_AA" value="0.450005" final="" />
+            <parameter id="GTR_di_codon.R_GT_AC" name="R_GT_AC" value="7.03127" final="" />
+            <parameter id="GTR_di_codon.R_GT_AG" name="R_GT_AG" value="0.415808" final="" />
+            <parameter id="GTR_di_codon.R_GT_AT" name="R_GT_AT" value="4.8179" final="" />
+            <parameter id="GTR_di_codon.R_GT_CA" name="R_GT_CA" value="0.997254" final="" />
+            <parameter id="GTR_di_codon.R_GT_CC" name="R_GT_CC" value="3.3493" final="" />
+            <parameter id="GTR_di_codon.R_GT_CG" name="R_GT_CG" value="0.326873" final="" />
+            <parameter id="GTR_di_codon.R_GT_CT" name="R_GT_CT" value="5.67974" final="" />
+            <parameter id="GTR_di_codon.R_GT_GA" name="R_GT_GA" value="4.16695" final="" />
+            <parameter id="GTR_di_codon.R_GT_GC" name="R_GT_GC" value="4.07063" final="" />
+            <parameter id="GTR_di_codon.R_GT_GG" name="R_GT_GG" value="11.0839" final="" />
+            <parameter id="GTR_di_codon.R_TA_AA" name="R_TA_AA" value="2.98553" final="" />
+            <parameter id="GTR_di_codon.R_TA_AC" name="R_TA_AC" value="0.600158" final="" />
+            <parameter id="GTR_di_codon.R_TA_AG" name="R_TA_AG" value="1.40122" final="" />
+            <parameter id="GTR_di_codon.R_TA_AT" name="R_TA_AT" value="0.894449" final="" />
+            <parameter id="GTR_di_codon.R_TA_CA" name="R_TA_CA" value="13.8393" final="" />
+            <parameter id="GTR_di_codon.R_TA_CC" name="R_TA_CC" value="3.86648" final="" />
+            <parameter id="GTR_di_codon.R_TA_CG" name="R_TA_CG" value="1.61427" final="" />
+            <parameter id="GTR_di_codon.R_TA_CT" name="R_TA_CT" value="3.32858" final="" />
+            <parameter id="GTR_di_codon.R_TA_GA" name="R_TA_GA" value="1.24347" final="" />
+            <parameter id="GTR_di_codon.R_TA_GC" name="R_TA_GC" value="0.370967" final="" />
+            <parameter id="GTR_di_codon.R_TA_GG" name="R_TA_GG" value="1.2171" final="" />
+            <parameter id="GTR_di_codon.R_TA_GT" name="R_TA_GT" value="0.405863" final="" />
+            <parameter id="GTR_di_codon.R_TC_AA" name="R_TC_AA" value="21.3592" final="" />
+            <parameter id="GTR_di_codon.R_TC_AC" name="R_TC_AC" value="8.53834" final="" />
+            <parameter id="GTR_di_codon.R_TC_AG" name="R_TC_AG" value="21.2037" final="" />
+            <parameter id="GTR_di_codon.R_TC_AT" name="R_TC_AT" value="3.32825" final="" />
+            <parameter id="GTR_di_codon.R_TC_CA" name="R_TC_CA" value="11.6381" final="" />
+            <parameter id="GTR_di_codon.R_TC_CC" name="R_TC_CC" value="230.326" final="" />
+            <parameter id="GTR_di_codon.R_TC_CG" name="R_TC_CG" value="1.52661" final="" />
+            <parameter id="GTR_di_codon.R_TC_CT" name="R_TC_CT" value="1246.79" final="" />
+            <parameter id="GTR_di_codon.R_TC_GA" name="R_TC_GA" value="0" final="" />
+            <parameter id="GTR_di_codon.R_TC_GC" name="R_TC_GC" value="4.07994" final="" />
+            <parameter id="GTR_di_codon.R_TC_GG" name="R_TC_GG" value="0" final="" />
+            <parameter id="GTR_di_codon.R_TC_GT" name="R_TC_GT" value="0.779624" final="" />
+            <parameter id="GTR_di_codon.R_TC_TA" name="R_TC_TA" value="7.50292" final="" />
+            <parameter id="GTR_di_codon.R_TG_AA" name="R_TG_AA" value="0.450019" final="" />
+            <parameter id="GTR_di_codon.R_TG_AC" name="R_TG_AC" value="0.997276" final="" />
+            <parameter id="GTR_di_codon.R_TG_AG" name="R_TG_AG" value="4.16717" final="" />
+            <parameter id="GTR_di_codon.R_TG_AT" name="R_TG_AT" value="0.405855" final="" />
+            <parameter id="GTR_di_codon.R_TG_CA" name="R_TG_CA" value="7.03072" final="" />
+            <parameter id="GTR_di_codon.R_TG_CC" name="R_TG_CC" value="3.34941" final="" />
+            <parameter id="GTR_di_codon.R_TG_CG" name="R_TG_CG" value="4.07079" final="" />
+            <parameter id="GTR_di_codon.R_TG_CT" name="R_TG_CT" value="0.77951" final="" />
+            <parameter id="GTR_di_codon.R_TG_GA" name="R_TG_GA" value="0.415724" final="" />
+            <parameter id="GTR_di_codon.R_TG_GC" name="R_TG_GC" value="0.326881" final="" />
+            <parameter id="GTR_di_codon.R_TG_GG" name="R_TG_GG" value="11.0843" final="" />
+            <parameter id="GTR_di_codon.R_TG_GT" name="R_TG_GT" value="0.649767" final="" />
+            <parameter id="GTR_di_codon.R_TG_TA" name="R_TG_TA" value="4.8183" final="" />
+            <parameter id="GTR_di_codon.R_TG_TC" name="R_TG_TC" value="5.67966" final="" />
+            <parameter id="GTR_di_codon.R_TT_AA" name="R_TT_AA" value="0" final="" />
+            <parameter id="GTR_di_codon.R_TT_AC" name="R_TT_AC" value="6.28825" final="" />
+            <parameter id="GTR_di_codon.R_TT_AG" name="R_TT_AG" value="0" final="" />
+            <parameter id="GTR_di_codon.R_TT_AT" name="R_TT_AT" value="4.77992" final="" />
+            <parameter id="GTR_di_codon.R_TT_CA" name="R_TT_CA" value="6.28457" final="" />
+            <parameter id="GTR_di_codon.R_TT_CC" name="R_TT_CC" value="173.625" final="" />
+            <parameter id="GTR_di_codon.R_TT_CG" name="R_TT_CG" value="0.92471" final="" />
+            <parameter id="GTR_di_codon.R_TT_CT" name="R_TT_CT" value="145.833" final="" />
+            <parameter id="GTR_di_codon.R_TT_GA" name="R_TT_GA" value="0" final="" />
+            <parameter id="GTR_di_codon.R_TT_GC" name="R_TT_GC" value="0.924703" final="" />
+            <parameter id="GTR_di_codon.R_TT_GG" name="R_TT_GG" value="44.7828" final="" />
+            <parameter id="GTR_di_codon.R_TT_GT" name="R_TT_GT" value="11.6429" final="" />
+            <parameter id="GTR_di_codon.R_TT_TA" name="R_TT_TA" value="4.78016" final="" />
+            <parameter id="GTR_di_codon.R_TT_TC" name="R_TT_TC" value="145.826" final="" />
+            <parameter id="GTR_di_codon.R_TT_TG" name="R_TT_TG" value="11.6433" final="" />
+        </compoundParameter>
+        <!--    Definition of equi-freqs for use in coding-paired rate martices :  -->
+        <!--       parameters derived from Bjarne Knudsens paired rate matrix:  -->
+        <!--       http://www.daimi.au.dk/~compbio/rnafold/dbl_mat.txt -->
+        <compoundParameter id="GTR_di_codon.freq">
+            <parameter id="GTR_di_codon.AA" name="AA" value="0.00116689" final="" />
+            <parameter id="GTR_di_codon.AC" name="AC" value="0.00180582" final="" />
+            <parameter id="GTR_di_codon.AG" name="AG" value="0.0010579" final="" />
+            <parameter id="GTR_di_codon.AT" name="AT" value="0.178002" final="" />
+            <parameter id="GTR_di_codon.CA" name="CA" value="0.00180601" final="" />
+            <parameter id="GTR_di_codon.CC" name="CC" value="0.00039046" final="" />
+            <parameter id="GTR_di_codon.CG" name="CG" value="0.266956" final="" />
+            <parameter id="GTR_di_codon.CT" name="CT" value="0.00076295" final="" />
+            <parameter id="GTR_di_codon.GA" name="GA" value="0.00105795" final="" />
+            <parameter id="GTR_di_codon.GC" name="GC" value="0.266961" final="" />
+            <parameter id="GTR_di_codon.GG" name="GG" value="0.00040598" final="" />
+            <parameter id="GTR_di_codon.GT" name="GT" value="0.0490447" final="" />
+            <parameter id="GTR_di_codon.TA" name="TA" value="0.177984" final="" />
+            <parameter id="GTR_di_codon.TC" name="TC" value="0.000763021" final="" />
+            <parameter id="GTR_di_codon.TG" name="TG" value="0.0490414" final="" />
+            <parameter id="GTR_di_codon.TT" name="TT" value="0.00279391" final="" />
+        </compoundParameter>
+        <!--    stem_1_1: -->
+        <codingDiNucModel id="SM_stem_1_1">
+            <modelParameters>
+                <compoundParameter id="stem_1_1.param">
+                    <parameterizedParameter idref="stem_1_1.s_left" />
+                    <parameterizedParameter idref="stem_1_1.s_right" />
+                    <compoundParameter idref="GTR_di_codon.param" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies>
+                <compoundParameter idref="GTR_di_codon.freq" />
+            </frequencies>
+            <alphabetPointer idref="fuzzyMetaDiNuc" />
+        </codingDiNucModel>
+        <evoTree id="ET_stem_1_1">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_stem_1_1" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_stem_1_1" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_stem_1_1" minPairDist="4" cardinality="2" useHashTable="true">
+            <evoTreePointer idref="ET_stem_1_1" />
+        </evoEmissionDistribution>
+        <!--    stem_1_2: -->
+        <codingDiNucModel id="SM_stem_1_2">
+            <modelParameters>
+                <compoundParameter id="stem_1_2.param">
+                    <parameterizedParameter idref="stem_1_2.s_left" />
+                    <parameterizedParameter idref="stem_1_2.s_right" />
+                    <compoundParameter idref="GTR_di_codon.param" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies>
+                <compoundParameter idref="GTR_di_codon.freq" />
+            </frequencies>
+            <alphabetPointer idref="fuzzyMetaDiNuc" />
+        </codingDiNucModel>
+        <evoTree id="ET_stem_1_2">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_stem_1_2" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_stem_1_2" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_stem_1_2" minPairDist="4" cardinality="2" useHashTable="true">
+            <evoTreePointer idref="ET_stem_1_2" />
+        </evoEmissionDistribution>
+        <!--    stem_1_3: -->
+        <codingDiNucModel id="SM_stem_1_3">
+            <modelParameters>
+                <compoundParameter id="stem_1_3.param">
+                    <parameterizedParameter idref="stem_1_3.s_left" />
+                    <parameterizedParameter idref="stem_1_3.s_right" />
+                    <compoundParameter idref="GTR_di_codon.param" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies>
+                <compoundParameter idref="GTR_di_codon.freq" />
+            </frequencies>
+            <alphabetPointer idref="fuzzyMetaDiNuc" />
+        </codingDiNucModel>
+        <evoTree id="ET_stem_1_3">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_stem_1_3" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_stem_1_3" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_stem_1_3" minPairDist="4" cardinality="2" useHashTable="true">
+            <evoTreePointer idref="ET_stem_1_3" />
+        </evoEmissionDistribution>
+        <!--    stem_2_1: -->
+        <codingDiNucModel id="SM_stem_2_1">
+            <modelParameters>
+                <compoundParameter id="stem_2_1.param">
+                    <parameterizedParameter idref="stem_2_1.s_left" />
+                    <parameterizedParameter idref="stem_2_1.s_right" />
+                    <compoundParameter idref="GTR_di_codon.param" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies>
+                <compoundParameter idref="GTR_di_codon.freq" />
+            </frequencies>
+            <alphabetPointer idref="fuzzyMetaDiNuc" />
+        </codingDiNucModel>
+        <evoTree id="ET_stem_2_1">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_stem_2_1" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_stem_2_1" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_stem_2_1" minPairDist="4" cardinality="2" useHashTable="true">
+            <evoTreePointer idref="ET_stem_2_1" />
+        </evoEmissionDistribution>
+        <!--    stem_2_2: -->
+        <codingDiNucModel id="SM_stem_2_2">
+            <modelParameters>
+                <compoundParameter id="stem_2_2.param">
+                    <parameterizedParameter idref="stem_2_2.s_left" />
+                    <parameterizedParameter idref="stem_2_2.s_right" />
+                    <compoundParameter idref="GTR_di_codon.param" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies>
+                <compoundParameter idref="GTR_di_codon.freq" />
+            </frequencies>
+            <alphabetPointer idref="fuzzyMetaDiNuc" />
+        </codingDiNucModel>
+        <evoTree id="ET_stem_2_2">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_stem_2_2" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_stem_2_2" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_stem_2_2" minPairDist="4" cardinality="2" useHashTable="true">
+            <evoTreePointer idref="ET_stem_2_2" />
+        </evoEmissionDistribution>
+        <!--    stem_2_3: -->
+        <codingDiNucModel id="SM_stem_2_3">
+            <modelParameters>
+                <compoundParameter id="stem_2_3.param">
+                    <parameterizedParameter idref="stem_2_3.s_left" />
+                    <parameterizedParameter idref="stem_2_3.s_right" />
+                    <compoundParameter idref="GTR_di_codon.param" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies>
+                <compoundParameter idref="GTR_di_codon.freq" />
+            </frequencies>
+            <alphabetPointer idref="fuzzyMetaDiNuc" />
+        </codingDiNucModel>
+        <evoTree id="ET_stem_2_3">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_stem_2_3" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_stem_2_3" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_stem_2_3" minPairDist="4" cardinality="2" useHashTable="true">
+            <evoTreePointer idref="ET_stem_2_3" />
+        </evoEmissionDistribution>
+        <!--    stem_3_1: -->
+        <codingDiNucModel id="SM_stem_3_1">
+            <modelParameters>
+                <compoundParameter id="stem_3_1.param">
+                    <parameterizedParameter idref="stem_3_1.s_left" />
+                    <parameterizedParameter idref="stem_3_1.s_right" />
+                    <compoundParameter idref="GTR_di_codon.param" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies>
+                <compoundParameter idref="GTR_di_codon.freq" />
+            </frequencies>
+            <alphabetPointer idref="fuzzyMetaDiNuc" />
+        </codingDiNucModel>
+        <evoTree id="ET_stem_3_1">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_stem_3_1" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_stem_3_1" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_stem_3_1" minPairDist="4" cardinality="2" useHashTable="true">
+            <evoTreePointer idref="ET_stem_3_1" />
+        </evoEmissionDistribution>
+        <!--    stem_3_2: -->
+        <codingDiNucModel id="SM_stem_3_2">
+            <modelParameters>
+                <compoundParameter id="stem_3_2.param">
+                    <parameterizedParameter idref="stem_3_2.s_left" />
+                    <parameterizedParameter idref="stem_3_2.s_right" />
+                    <compoundParameter idref="GTR_di_codon.param" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies>
+                <compoundParameter idref="GTR_di_codon.freq" />
+            </frequencies>
+            <alphabetPointer idref="fuzzyMetaDiNuc" />
+        </codingDiNucModel>
+        <evoTree id="ET_stem_3_2">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_stem_3_2" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_stem_3_2" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_stem_3_2" minPairDist="4" cardinality="2" useHashTable="true">
+            <evoTreePointer idref="ET_stem_3_2" />
+        </evoEmissionDistribution>
+        <!--    stem_3_3: -->
+        <codingDiNucModel id="SM_stem_3_3">
+            <modelParameters>
+                <compoundParameter id="stem_3_3.param">
+                    <parameterizedParameter idref="stem_3_3.s_left" />
+                    <parameterizedParameter idref="stem_3_3.s_right" />
+                    <compoundParameter idref="GTR_di_codon.param" />
+                </compoundParameter>
+            </modelParameters>
+            <frequencies>
+                <compoundParameter idref="GTR_di_codon.freq" />
+            </frequencies>
+            <alphabetPointer idref="fuzzyMetaDiNuc" />
+        </codingDiNucModel>
+        <evoTree id="ET_stem_3_3">
+            <tree idref="T_all" />
+            <treeScale>
+                <parameterizedParameter idref="TS_stem_3_3" />
+            </treeScale>
+            <substitutionModelPointer idref="SM_stem_3_3" />
+            <taxa idref="TA_all" />
+        </evoTree>
+        <evoEmissionDistribution id="ED_stem_3_3" minPairDist="4" cardinality="2" useHashTable="true">
+            <evoTreePointer idref="ET_stem_3_3" />
+        </evoEmissionDistribution>
+        <!--    Combined distributions: -->
+        <!--    label dependent distribution: -->
+        <!--    non_structural emission distribution: -->
+        <labelDependentEmissionDistribution id="ED_non_structural" typeName="codonmask" cardinality="1" useHashTable="true">
+            <nestedEmissionDistribution type="1">
+                <emissionDistributionPointer idref="ED_non_structural_1" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution type="2">
+                <emissionDistributionPointer idref="ED_non_structural_2" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution type="3">
+                <emissionDistributionPointer idref="ED_non_structural_3" />
+            </nestedEmissionDistribution>
+        </labelDependentEmissionDistribution>
+        <!--    slow_non_structural emission distribution: -->
+        <labelDependentEmissionDistribution id="ED_slow_non_structural" typeName="codonmask" cardinality="1" useHashTable="true">
+            <nestedEmissionDistribution type="1">
+                <emissionDistributionPointer idref="ED_slow_non_structural_1" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution type="2">
+                <emissionDistributionPointer idref="ED_slow_non_structural_2" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution type="3">
+                <emissionDistributionPointer idref="ED_slow_non_structural_3" />
+            </nestedEmissionDistribution>
+        </labelDependentEmissionDistribution>
+        <!--    fast_non_structural emission distribution: -->
+        <labelDependentEmissionDistribution id="ED_fast_non_structural" typeName="codonmask" cardinality="1" useHashTable="true">
+            <nestedEmissionDistribution type="1">
+                <emissionDistributionPointer idref="ED_fast_non_structural_1" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution type="2">
+                <emissionDistributionPointer idref="ED_fast_non_structural_2" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution type="3">
+                <emissionDistributionPointer idref="ED_fast_non_structural_3" />
+            </nestedEmissionDistribution>
+        </labelDependentEmissionDistribution>
+        <!--    loop emission distribution: -->
+        <labelDependentEmissionDistribution id="ED_loop" typeName="codonmask" cardinality="1" useHashTable="true">
+            <nestedEmissionDistribution type="1">
+                <emissionDistributionPointer idref="ED_loop_1" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution type="2">
+                <emissionDistributionPointer idref="ED_loop_2" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution type="3">
+                <emissionDistributionPointer idref="ED_loop_3" />
+            </nestedEmissionDistribution>
+        </labelDependentEmissionDistribution>
+        <!--   stem emission distribution: -->
+        <labelPairDependentEmissionDistribution id="ED_stem" typeName="codonmask" cardinality="2" useHashTable="true">
+            <nestedEmissionDistribution leftLabel="1" rightLabel="1">
+                <emissionDistributionPointer idref="ED_stem_1_1" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution leftLabel="1" rightLabel="2">
+                <emissionDistributionPointer idref="ED_stem_1_2" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution leftLabel="1" rightLabel="3">
+                <emissionDistributionPointer idref="ED_stem_1_3" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution leftLabel="2" rightLabel="1">
+                <emissionDistributionPointer idref="ED_stem_2_1" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution leftLabel="2" rightLabel="2">
+                <emissionDistributionPointer idref="ED_stem_2_2" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution leftLabel="2" rightLabel="3">
+                <emissionDistributionPointer idref="ED_stem_2_3" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution leftLabel="3" rightLabel="1">
+                <emissionDistributionPointer idref="ED_stem_3_1" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution leftLabel="3" rightLabel="2">
+                <emissionDistributionPointer idref="ED_stem_3_2" />
+            </nestedEmissionDistribution>
+            <nestedEmissionDistribution leftLabel="3" rightLabel="3">
+                <emissionDistributionPointer idref="ED_stem_3_3" />
+            </nestedEmissionDistribution>
+        </labelPairDependentEmissionDistribution>
+        <parameterizedEmissionDistributionSet id="ED_set_parameterized">
+            <sharedFreeParamters>
+                <compoundParameter idref="shared_pset" />
+            </sharedFreeParamters>
+            <nestedEmissionDistributionSet id="ED_set_parameterized.emissionDistributionSet">
+                <emissionDistributionPointer idref="ED_non_structural" />
+                <emissionDistributionPointer idref="ED_slow_non_structural" />
+                <emissionDistributionPointer idref="ED_fast_non_structural" />
+                <emissionDistributionPointer idref="ED_loop" />
+                <emissionDistributionPointer idref="ED_stem" />
+            </nestedEmissionDistributionSet>
+        </parameterizedEmissionDistributionSet>
+        <grammar>
+            <!--  begin  -->
+            <state id="begin" stateType="start" />
+            <transition id="begin_to_NS" from="begin" to="NS">
+                <parameter id="begin_to_NS.param" value="1" />
+            </transition>
+            <transition id="begin_to_S" from="begin" to="S">
+                <parameter id="begin_to_S.param" value="0" />
+            </transition>
+            <!--       intermediate_NS_S -->
+            <state id="intermediate_NS_S" stateType="start" />
+            <transition id="intermediate_NS_S-&gt;NS" from="intermediate_NS_S" to="NS">
+                <parameter id="intermediate_NS_S-&gt;NS.param" value="1" />
+            </transition>
+            <transition id="intermediate_NS_S-&gt;S" from="intermediate_NS_S" to="S">
+                <parameter id="intermediate_NS_S-&gt;S.param" value="0" />
+            </transition>
+            <!--       NS -->
+            <state id="NS" stateType="start" />
+            <transition id="NS-&gt;bifurcation_NS" from="NS" to="bifurcation_NS">
+                <parameter id="NS-&gt;bifurcation_NS.param" value="1" />
+            </transition>
+            <!--       bifurcation_NS -->
+            <state id="bifurcation_NS" stateType="bifurcate" />
+            <transition id="bifurcation_NS-&gt;begin_NS|S" from="bifurcation_NS" toLeft="begin_NS" toRight="S">
+                <parameter id="bifurcation_NS-&gt;begin_NS|S.param" value="1" />
+            </transition>
+            <!--       S -->
+            <state id="S" stateType="start" />
+            <transition id="S-&gt;bifurcation_S" from="S" to="bifurcation_S">
+                <parameter id="S-&gt;bifurcation_S.param" value="0.0268817" />
+            </transition>
+            <transition id="S-&gt;end" from="S" to="end">
+                <parameter id="S-&gt;end.param" value="0.973118" />
+            </transition>
+            <!--       bifurcation_S -->
+            <state id="bifurcation_S" stateType="bifurcate" />
+            <transition id="bifurcation_S-&gt;begin_S|intermediate_NS_S" from="bifurcation_S" toLeft="begin_S" toRight="intermediate_NS_S">
+                <parameter id="bifurcation_S-&gt;begin_S|intermediate_NS_S.param" value="1" />
+            </transition>
+            <!--        begin_NS -->
+            <state id="begin_NS" stateType="start" />
+            <transition id="begin_NS-&gt;left_NS" from="begin_NS" to="left_NS">
+                <parameter id="begin_NS-&gt;left_NS.param" value="6.42931e-05" />
+            </transition>
+            <transition id="begin_NS-&gt;left_slow_NS" from="begin_NS" to="left_slow_NS">
+                <parameter id="begin_NS-&gt;left_slow_NS.param" value="0.85349" />
+            </transition>
+            <transition id="begin_NS-&gt;left_fast_NS" from="begin_NS" to="left_fast_NS">
+                <parameter id="begin_NS-&gt;left_fast_NS.param" value="0.146445" />
+            </transition>
+            <!--       left_NS -->
+            <state id="left_NS" stateType="left" emissionDistribution="ED_non_structural">
+                <labelSet>
+                    <labelType typeName="pairingmask" leftLabel="." />
+                    <labelType typeName="stateAnno" leftLabel="NS" />
+                </labelSet>
+            </state>
+            <transition id="left_NS-&gt;left_NS" from="left_NS" to="left_NS">
+                <parameter id="left_NS-&gt;left_NS.param" value="0.0658386" />
+            </transition>
+            <transition id="left_NS-&gt;left_slow_NS" from="left_NS" to="left_slow_NS">
+                <parameter id="left_NS-&gt;left_slow_NS.param" value="0.118122" />
+            </transition>
+            <transition id="left_NS-&gt;left_fast_NS" from="left_NS" to="left_fast_NS">
+                <parameter id="left_NS-&gt;left_fast_NS.param" value="0.811039" />
+            </transition>
+            <transition id="left_NS-&gt;end" from="left_NS" to="end">
+                <parameter id="left_NS-&gt;end.param" value="0.005" final="" />
+            </transition>
+            <!--       left_slow_NS -->
+            <state id="left_slow_NS" stateType="left" emissionDistribution="ED_slow_non_structural">
+                <labelSet>
+                    <labelType typeName="pairingmask" leftLabel="." />
+                    <labelType typeName="stateAnno" leftLabel="NS" />
+                </labelSet>
+            </state>
+            <transition id="left_slow_NS-&gt;left_slow_NS" from="left_slow_NS" to="left_slow_NS">
+                <parameter id="left_slow_NS-&gt;left_slow_NS.param" value="0.895787" />
+            </transition>
+            <transition id="left_slow_NS-&gt;left_NS" from="left_slow_NS" to="left_NS">
+                <parameter id="left_slow_NS-&gt;left_NS.param" value="0.00233728" />
+            </transition>
+            <transition id="left_slow_NS-&gt;left_fast_NS" from="left_slow_NS" to="left_fast_NS">
+                <parameter id="left_slow_NS-&gt;left_fast_NS.param" value="0.0968759" />
+            </transition>
+            <transition id="left_slow_NS-&gt;end" from="left_slow_NS" to="end">
+                <parameter id="left_slow_NS-&gt;end.param" value="0.005" final="" />
+            </transition>
+            <!--       left_fast_NS -->
+            <state id="left_fast_NS" stateType="left" emissionDistribution="ED_fast_non_structural">
+                <labelSet>
+                    <labelType typeName="pairingmask" leftLabel="." />
+                    <labelType typeName="stateAnno" leftLabel="NS" />
+                </labelSet>
+            </state>
+            <transition id="left_fast_NS-&gt;left_fast_NS" from="left_fast_NS" to="left_fast_NS">
+                <parameter id="left_fast_NS-&gt;left_fast_NS.param" value="0.477682" />
+            </transition>
+            <transition id="left_fast_NS-&gt;left_slow_NS" from="left_fast_NS" to="left_slow_NS">
+                <parameter id="left_fast_NS-&gt;left_slow_NS.param" value="0.510205" />
+            </transition>
+            <transition id="left_fast_NS-&gt;left_NS" from="left_fast_NS" to="left_NS">
+                <parameter id="left_fast_NS-&gt;left_NS.param" value="0.00711306" />
+            </transition>
+            <transition id="left_fast_NS-&gt;end" from="left_fast_NS" to="end">
+                <parameter id="left_fast_NS-&gt;end.param" value="0.005" final="" />
+            </transition>
+            <!--        begin_S -->
+            <state id="begin_S" stateType="start" />
+            <transition id="begin_S-&gt;first_pair" from="begin_S" to="first_pair">
+                <parameter id="begin_S-&gt;first_pair.param" value="1" />
+            </transition>
+            <!--       intermediate -->
+            <state id="intermediate" stateType="start" />
+            <transition id="intermediate_to_bifurcation" from="intermediate" to="bifurcation">
+                <parameter id="intermediate_to_bifurcation.param" value="0.737705" />
+            </transition>
+            <transition id="intermediate_to_emit" from="intermediate" to="emit">
+                <parameter id="intermediate_to_emit.param" value="0.262295" />
+            </transition>
+            <!--       bifurcation -->
+            <state id="bifurcation" stateType="bifurcate" />
+            <transition id="bifurcation-&gt;emit|intermediate" from="bifurcation" toLeft="emit" toRight="intermediate">
+                <parameter id="bifurcation-&gt;emit|intermediate.param" value="1" />
+            </transition>
+            <!--       emit -->
+            <state id="emit" stateType="start" />
+            <transition id="emit-&gt;left" from="emit" to="left">
+                <parameter id="emit-&gt;left.param" value="0.857143" />
+            </transition>
+            <transition id="emit-&gt;first_pair" from="emit" to="first_pair">
+                <parameter id="emit-&gt;first_pair.param" value="0.142857" />
+            </transition>
+            <!--       left -->
+            <state id="left" stateType="left" emissionDistribution="ED_loop">
+                <labelSet>
+                    <labelType typeName="pairingmask" leftLabel="." />
+                    <labelType typeName="stateAnno" leftLabel="." />
+                </labelSet>
+            </state>
+            <transition id="left-&gt;end" from="left" to="end">
+                <parameter id="left-&gt;end.param" value="1" />
+            </transition>
+            <!--       end   -->
+            <state id="end" stateType="end" />
+            <!--       pair -->
+            <state id="pair" stateType="pair" emissionDistribution="ED_stem">
+                <labelSet>
+                    <labelType typeName="pairingmask" leftLabel="(" rightLabel=")" />
+                    <labelType typeName="stateAnno" leftLabel="(" rightLabel=")" />
+                </labelSet>
+            </state>
+            <transition id="pair-&gt;pair" from="pair" to="pair">
+                <parameter id="pair-&gt;pair.param" value="0.822785" />
+            </transition>
+            <transition id="pair-&gt;bifurcation" from="pair" to="bifurcation">
+                <parameter id="pair-&gt;bifurcation.param" value="0.177215" />
+            </transition>
+            <!--       first_pair -->
+            <state id="first_pair" stateType="pair" emissionDistribution="ED_stem">
+                <labelSet>
+                    <labelType typeName="pairingmask" leftLabel="(" rightLabel=")" />
+                    <labelType typeName="stateAnno" leftLabel="(" rightLabel=")" />
+                </labelSet>
+            </state>
+            <transition id="first_pair-&gt;pair" from="first_pair" to="pair">
+                <parameter id="first_pair-&gt;pair.param" value="1" />
+            </transition>
+            <!--       High level structures - automatically composed from the -->
+            <!--       above defined objects. -->
+            <transitionSet id="codingRNAscfg.transitionSet" />
+            <stateSet id="codingRNAscfg.stateSet" />
+        </grammar>
+        <scfg id="codingRNAscfg" 
+	      name="codingRNAscfg" 
+	      version="1.0" 
+	      author="Roald, Jakob and, Irmtraud" 
+	      created="6 Jan 04" 
+	      description="an SCFG for RNA sec struct in coding regions.">
+            <transitionSet idref="codingRNAscfg.transitionSet" />
+            <stateSet idref="codingRNAscfg.stateSet" />
+            <emissionDistributionSet idref="ED_set_parameterized" />
+        </scfg>
+        <!-- scfg body ends here -->
+    </scfg_specification>
+
+    <!--       Specifies a model, a data set and the type of analysis to perform -->
+    <analysis>
+
+        <scfg idref="codingRNAscfg" />
+
+        <observationSet idref="input_alg" />
+
+      <!--         <reportFile> -->
+      <!--	         <file name="./output/codingRNAscfg_v.2.7_report.txt" /> -->
+      <!--         </reportFile> -->
+
+      <!--     <writeGrammarInfo> -->
+      <!--       <verbose level="1" /> -->
+      <!--     </writeGrammarInfo> -->
+      <!--         <writeDotGraph> -->
+      <!--           <verbose level="1" /> -->
+      <!--           <file name="./output/codingRNAscfg_v.2.7.dot" /> -->
+      <!--         </writeDotGraph> -->
+      <!--     <inside> -->
+      <!--       <verbose level="1" /> -->
+      <!--     </inside> -->
+      <!--         <posteriourDecoding restricted = "true" calculatePostProbs = "true" annotatePairedPos = "true" > -->
+      <!--           <verbose level="1" /> -->
+      <!--           <file name="./output/test_pd.col" /> -->
+      <!--         </posteriourDecoding> -->
+      <!--         <cyk calculatePostProbs = "true" annotatePairedPos = "true" > -->
+      <!--           <verbose level="1" /> -->
+      <!--           <file name="./output/test_cyk.col" /> -->
+      <!--         </cyk> -->
+      <!--     <resetAnnotationUse> -->
+      <!--       <verbose level="1" /> -->
+      <!--       <labelSet> -->
+      <!--     	<labelType typeName="pairingmask"   /> -->
+      <!--       </labelSet> -->
+      <!--     </resetAnnotationUse> -->
+
+      <statePosteriorProb>
+	<verbose level="1" />
+	<stateList>
+
+	  <!-- 	  List of state representatives for the labels which posterior -->
+	  <!-- 	  probabilities should be calculated for. 'left' is the loop -->
+	  <!-- 	  state and 'left_NS' is a representative for the -->
+	  <!-- 	  non-structural states. -->
+
+	  <state idref="left" />
+	  <state idref="left_NS" />
+	</stateList>
+	<file name="./output/scan_PP.col" />
+      </statePosteriorProb>
+
+    </analysis>
+
+</scfg-framework>

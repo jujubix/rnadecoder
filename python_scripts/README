@@ -1,0 +1,33 @@
+                         README for extendAnnotation
+
+
+This file briefly documents the extendAnnotation.py script. Please
+note that no documentation is provided for the twoStepPrediction.py
+script.
+
+INTRODUCTION:
+
+extendAnnotation takes an alignment col file containing a single
+alignment entry which is supplied with a pairing mask as input. Please
+see the top README file for explanations of the file format etc.. It
+will output a col file which contains an entry for each sequence of
+the multiple alignment and will create an individual pairing mask for
+each sequence. This is done according to a set of annotation extension
+rules (see article mentioned in top README file and the script itself
+for details).
+
+
+DEPENDENCIES:
+
+A path to the py_modules must be set in the header section of the
+script.
+
+
+RUNNING:
+
+  python_scripts/extendAnnotation.py <infile.col> <outfile.col>
+
+
+AUTHOR:
+
+Jakob Skou Pedersen,  jsp@daimi.au.dk

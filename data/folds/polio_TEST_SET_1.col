@@ -1,0 +1,145 @@
+; ==========
+; ENTRY	polio_CRE_element
+; TYPE	nucleotide
+; COL 1	labels type="codonmask"
+; COL 2	symbols taxa="NC_002058"
+; COL 3	symbols taxa="POLIO1A"
+; COL 4	symbols taxa="HPO416942"
+; COL 5	symbols taxa="HPO132960"
+; COL 6	symbols taxa="HPO132961"
+; COL 7	symbols taxa="AF462418"
+; COL 8	symbols taxa="AF462419"
+; COL 9	symbols taxa="AF405682"
+; COL 10	symbols taxa="AF405690"
+; COL 11	symbols taxa="AF405669"
+; COL 12	symbols taxa="AF405666"
+; COL 13	symbols taxa="POL2LAN"
+; COL 14	symbols taxa="POL2CG1"
+; COL 15	symbols taxa="AF448782"
+; COL 16	symbols taxa="AF448783"
+; COL 17	symbols taxa="AY177685"
+; COL 18	symbols taxa="AY278549"
+; COL 19	symbols taxa="AY278550"
+; COL 20	symbols taxa="AY278552"
+; COL 21	symbols taxa="AY278551"
+; COL 22	symbols taxa="POL3L37"
+; COL 23	symbols taxa="AF541919"
+; COL 24	symbols taxa="HPO293918"
+; COL 25	symbols taxa="PIP03XX"
+; COL 26	symbols taxa="AY278553"
+; COL 27	symbols taxa="AY056701"
+; COL 28	symbols taxa="X00925"
+; COL 29	pairedPositions
+; COL 30	positions
+; ----------
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4439
+3	A	A	A	A	A	A	A	G	G	G	A	G	G	A	G	A	A	A	A	G	G	A	A	G	G	A	G	.	4440
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4441
+2	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	4442
+3	A	A	A	A	A	G	G	A	A	A	G	A	A	G	G	G	G	G	G	A	A	G	A	A	A	A	A	.	4443
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4444
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	.	4445
+3	A	A	A	A	A	T	T	A	A	A	A	A	A	T	T	T	T	T	T	C	A	T	C	A	C	C	A	.	4446
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4447
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4448
+3	G	G	G	G	G	A	A	A	A	A	G	A	A	G	G	A	A	A	A	A	A	A	G	G	A	G	A	.	4449
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4450
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4451
+3	A	A	A	G	G	G	G	A	A	A	A	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	.	4452
+1	C	C	C	C	C	C	C	T	T	T	C	T	T	T	T	C	C	C	C	T	T	C	T	T	T	T	T	.	4453
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	.	4454
+3	A	A	A	A	A	G	G	G	G	A	A	A	A	A	A	G	G	G	G	G	G	G	A	G	G	G	G	.	4455
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	4456
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4457
+3	G	G	G	G	A	G	G	A	A	A	A	G	G	A	A	G	G	G	G	A	A	A	G	A	A	A	A	.	4458
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4459
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4460
+3	T	T	T	T	C	T	T	C	C	T	T	C	C	C	T	T	T	T	T	C	C	T	C	C	T	C	C	.	4461
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	G	A	.	4462
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	G	C	.	4463
+3	T	T	C	C	T	C	C	C	C	C	A	G	G	A	A	C	C	C	C	C	C	C	A	G	A	A	C	4524	4464
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4523	4465
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4522	4466
+3	T	T	T	T	T	A	A	T	T	C	A	T	T	C	T	A	A	A	A	C	T	A	T	T	T	T	T	4521	4467
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4520	4468
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4519	4469
+3	C	C	C	C	C	T	T	T	T	T	C	C	C	C	T	T	T	T	T	C	T	T	C	C	C	T	T	4518	4470
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4517	4471
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4516	4472
+3	C	C	C	C	C	T	T	T	T	C	C	C	C	T	T	T	T	T	T	T	T	T	T	T	C	T	T	.	4473
+1	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	.	4474
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4515	4475
+3	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	4514	4476
+1	A	A	A	A	A	G	G	A	A	A	A	G	G	A	A	A	G	A	G	A	A	G	A	A	A	A	A	4513	4477
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4512	4478
+3	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4511	4479
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	4510	4480
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4481
+3	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	G	G	G	G	G	G	G	G	4507	4482
+1	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4506	4483
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4505	4484
+3	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	4504	4485
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4503	4486
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4502	4487
+3	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	4488
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4489
+2	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	4490
+3	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4491
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4492
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4493
+3	A	A	A	A	A	G	G	A	A	A	A	A	A	A	A	G	G	G	G	A	A	G	A	A	A	A	A	.	4494
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4495
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4496
+3	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4497
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4498
+2	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	4499
+3	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	G	T	.	4500
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4501
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4487	4502
+3	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4486	4503
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	4485	4504
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4484	4505
+3	A	A	A	A	A	G	G	A	A	A	A	A	A	G	A	G	A	G	G	A	G	G	A	A	G	A	G	4483	4506
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	4482	4507
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4508
+3	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	G	A	A	A	A	A	A	A	.	4509
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	4480	4510
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4479	4511
+3	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	4478	4512
+1	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4477	4513
+2	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	4476	4514
+3	T	T	T	T	C	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	C	T	T	T	T	4475	4515
+1	T	T	T	T	T	T	T	T	T	T	C	T	T	T	T	T	T	T	T	C	T	T	T	T	T	C	T	4472	4516
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4471	4517
+3	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	G	G	G	A	G	G	G	G	G	A	G	4470	4518
+1	C	C	C	C	C	T	T	T	T	T	T	T	T	T	T	T	T	T	T	C	T	T	T	T	T	T	T	4469	4519
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4468	4520
+3	A	A	A	A	A	A	A	A	A	A	G	G	G	G	A	A	A	A	A	A	A	A	A	A	G	A	A	4467	4521
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	4466	4522
+2	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	T	4465	4523
+3	A	A	A	G	G	G	A	A	A	G	A	G	G	A	G	A	A	A	A	G	G	A	G	A	G	G	G	4464	4524
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4525
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4526
+3	T	T	T	T	T	T	T	C	C	C	C	C	C	T	T	T	T	T	T	C	T	T	T	T	T	T	T	.	4527
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	4528
+2	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	4529
+3	C	C	C	C	C	T	C	C	C	T	G	T	T	T	C	C	C	C	C	C	G	C	T	T	C	T	G	.	4530
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4531
+2	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	4532
+3	C	C	C	C	C	T	T	C	C	C	C	C	C	T	T	T	T	T	T	T	C	T	T	C	C	C	C	.	4533
+1	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4534
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4535
+3	C	C	C	C	C	A	A	A	A	A	T	A	A	C	T	A	A	A	A	A	A	A	A	C	T	A	A	.	4536
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	4537
+2	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	.	4538
+3	A	A	A	A	A	G	G	T	T	C	C	C	C	T	T	G	G	G	G	A	T	G	G	A	A	G	T	.	4539
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4540
+2	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	C	.	4541
+3	A	A	A	A	A	A	A	G	G	G	T	G	G	G	A	A	A	A	A	A	A	A	G	T	A	A	A	.	4542
+1	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	A	G	.	4543
+2	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	G	C	G	.	4544
+3	T	T	T	C	C	A	A	G	G	G	A	C	C	C	C	A	A	A	A	T	A	A	C	C	C	A	A	.	4545
+1	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4546
+2	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	A	.	4547
+3	A	A	A	A	A	A	A	G	G	G	G	G	G	A	A	A	A	A	A	G	A	A	A	G	G	A	A	.	4548
+; **********
